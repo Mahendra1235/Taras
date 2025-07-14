@@ -281,7 +281,7 @@ hr {
   color: #003366;
   padding: 2rem;
   background-color: #fff;
-  height: 87.8vh;
+  height: 85vh;
 }
 
 .contact-title {
@@ -556,7 +556,7 @@ h1 {
 
 .course-detail-container {
   display: flex;
-  height:78vh;
+  height:85vh;
   flex-direction: row; 
   align-items: flex-start;
   justify-content: space-between;
@@ -835,7 +835,7 @@ h1 {
 .team-page {
   padding: 60px 20px;
   background: linear-gradient(to right, #f0f4f8, #eaf1f8);
-  height: 87.8vh;
+  height: 85vh;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
