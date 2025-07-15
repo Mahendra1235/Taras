@@ -17,6 +17,7 @@ background: linear-gradient(
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: auto;
 }
 
 
@@ -118,7 +119,7 @@ hr {
   background-image: url('../src//Bg2.jpg');
   background-size:cover;
   background-position: center;
-  height: 85vh;
+  min-height: 100vh;
   position: relative;
   color: white;
   font-family: Arial, sans-serif;
@@ -160,6 +161,22 @@ hr {
 }
 
 
+/* Fixed footer only on large screens */
+@media (min-width: 400px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+/* On mobile (up to 768px), let footer be part of normal flow */
+@media (max-width: 400px) {
+  .footer {
+    position: relative;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
 
 
 
@@ -275,13 +292,12 @@ hr {
 
 /* ContactUs page */
 .contact-page {
-    background: linear-gradient(to right, #f0f4f8, #eaf1f8);
-
+  background: linear-gradient(to right, #f0f4f8, #eaf1f8);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #003366;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #fff;
-  height: 85vh;
+  min-height: 100vh;
 }
 
 .contact-title {
@@ -298,6 +314,7 @@ hr {
   max-width: 1600px;
   margin: 0 auto;
   flex-wrap: wrap;
+  padding-bottom: 10px;
 }
 
 .card {
@@ -450,15 +467,20 @@ h1 {
 
 /* Solution page */
 
+.solutions-container {
+  padding-bottom: 20px;
+  min-height: 100vh;
+}
+
 .solutions-title {
-  font-size: 2.5rem;
-  padding-bottom: 30px;
+  font-size: 2rem;
+  padding-bottom: 5px;
   color: #003366;   
   text-align:center;
-  padding-top: 10px;
+  padding-top: 5px;
   text-decoration: underline;  
   text-underline-offset: 6px;  
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 
@@ -482,12 +504,12 @@ h1 {
 .course-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
 }
 
 .course-card {
-  width: 500px;
+  width: 480px;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
@@ -533,7 +555,7 @@ h1 {
 .card-content p {
   font-size: 0.95rem;
   color: #555;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   line-height: 1.4;
   flex-grow: 1;
 }
@@ -556,7 +578,7 @@ h1 {
 
 .course-detail-container {
   display: flex;
-  height:85vh;
+  min-height:85vh;
   flex-direction: row; 
   align-items: flex-start;
   justify-content: space-between;
@@ -835,7 +857,7 @@ h1 {
 .team-page {
   padding: 60px 20px;
   background: linear-gradient(to right, #f0f4f8, #eaf1f8);
-  height: 85vh;
+  min-height: 80vh;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
