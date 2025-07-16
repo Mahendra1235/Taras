@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../LOGO-TARAS.png';
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo-container">
@@ -10,11 +16,20 @@ function Header() {
           <img src={Logo} alt="Company Logo" className="logo" />
         </Link>
       </div>
-      <ul className="menu">
-        <li><Link to="/solutions">Solutions</Link></li>
-        <li><Link to="/aboutus">About Us</Link></li>
-        <li><Link to="/team">Team</Link></li>
-        <li><Link to="/contactus">Contact Us</Link></li>
+
+      {/* Hamburger icon */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+
+      {/* Menu list */}
+      <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
+        <li><Link to="/solutions" onClick={() => setIsMenuOpen(false)}>Solutions</Link></li>
+        <li><Link to="/aboutus" onClick={() => setIsMenuOpen(false)}>About Us</Link></li>
+        <li><Link to="/team" onClick={() => setIsMenuOpen(false)}>Team</Link></li>
+        <li><Link to="/contactus" onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
       </ul>
     </nav>
   );
