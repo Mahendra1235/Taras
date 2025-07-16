@@ -120,9 +120,9 @@ hr {
 
 .home {
   background-image: url('../src/Bg2.jpg');
-  background-size:cover;
+  background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  min-height: 85vh;
   position: relative;
   color: white;
   font-family: Arial, sans-serif;
@@ -142,6 +142,20 @@ hr {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* Responsive - Home Page */
+@media (max-width: 400px) {
+  .home {
+    height: 100vh;
+  }
+  .overlay-text {
+    top: 20%;
+    left: 50%;
+    font-size: 1.2rem;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
 
 .footer {
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
