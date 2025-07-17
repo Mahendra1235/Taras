@@ -556,7 +556,7 @@ h1 {
 
 .solutions-container {
   padding-bottom: 20px;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .solutions-title {
@@ -597,6 +597,7 @@ h1 {
 
 .course-card {
   width: 480px;
+  height: 60vh;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
@@ -661,7 +662,59 @@ h1 {
   background-color: #218838;
 }
 
+@media (max-width: 480px) {
+  .course-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 
+  .course-card {
+    width: 90vw;
+    height: auto;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+
+  .card-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-content {
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+
+  .card-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-content p {
+    font-size: 0.85rem;
+  }
+
+  .explore-btn {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+  }
+
+  .back-button {
+    width: 90%;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .solutions-title {
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+}
+
+
+/*Course detail container*/
 
 .course-detail-container {
   display: flex;

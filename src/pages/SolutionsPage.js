@@ -14,7 +14,7 @@ import embeddedsystems from '../assets/embeeded systems.jpg';
 import aiml from '../assets/aiml.png';
 import trainingkit from '../assets/training kit.jpg';
 import interview from '../assets/interview.jpg';
-import COE from '../assets/COE...jpg';
+import COE from '../assets/COE1.jpg';
 import projectsImg from '../assets/ComingSoon.png';
 
 const data = {
