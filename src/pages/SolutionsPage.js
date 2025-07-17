@@ -11,7 +11,7 @@ import Projects from './Projects';
 
 import vlsi from '../assets/vlsi.jpg';
 import embeddedsystems from '../assets/embeeded systems.jpg';
-import aiml from '../assets/aiml.png';
+import aiml from '../assets/AI-ML Course Img...png';
 import trainingkit from '../assets/training kit.jpg';
 import interview from '../assets/interview.jpg';
 import COE from '../assets/COE1.jpg';
