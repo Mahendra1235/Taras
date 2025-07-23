@@ -26,8 +26,8 @@ function Header() {
 
       {/* Menu list */}
       <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
-        <li><Link to="/solutions" onClick={() => setIsMenuOpen(false)}>Solutions</Link></li>
         <li><Link to="/aboutus" onClick={() => setIsMenuOpen(false)}>About Us</Link></li>
+        <li><Link to="/solutions" onClick={() => setIsMenuOpen(false)}>Solutions</Link></li>
         <li><Link to="/team" onClick={() => setIsMenuOpen(false)}>Team</Link></li>
         <li><Link to="/contactus" onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
       </ul>

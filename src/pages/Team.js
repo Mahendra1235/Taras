@@ -3,20 +3,14 @@ import React from 'react';
 const teamMembers = [
   {
     name: 'Madhavan',
-    role: 'Founder & VLSI Trainer',
+    role: 'VLSI ',
     image: 'https://randomuser.me/api/portraits/men/39.jpg',
     bio: 'PhD in Microelectronics with 15+ years of industry and academic experience in VLSI and ASIC design.'
-  },
-  {
-    name: 'Venkatachalam',
-    role: 'Embedded Systems Trainer',
-    image: 'https://randomuser.me/api/portraits/men/50.jpg',
-    bio: 'Expert in Embedded C, IoT, and RTOS. Led 30+ hands-on bootcamps across universities.'
   },
 
 {
     name: 'Venkateshan',
-    role: 'AI/ML Trainer',
+    role: 'Embedded Systems & AI/ML',
     image: 'https://randomuser.me/api/portraits/men/83.jpg',
     bio: 'Expert in AI and ML. Led 25+ hands-on bootcamps across universities.'
   },

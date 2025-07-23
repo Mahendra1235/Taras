@@ -7,7 +7,6 @@ const ContactUs = () => {
 
       <div className="contact-container">
 
-        {/* Left: Contact Information */}
         <div className="contact-info card">
           <h2>Contact Information</h2>
           <p className="contact-desc">
@@ -19,8 +18,8 @@ const ContactUs = () => {
             <div>
               <strong>Email:</strong><br />
              <div className="contact-emails">
-                <a href="mailto:shriram@tarassolutions.com" className="contact-link">shriram@tarassolutions.com</a><br />
                 <a href="mailto:HR@tarassolutions.com" className="contact-link">HR@tarassolutions.com</a><br />
+                <a href="mailto:shriram@tarassolutions.com" className="contact-link">shriram@tarassolutions.com</a><br />
                 <a href="mailto:Madhav.s@tarassolutions.com" className="contact-link">Madhav.s@tarassolutions.com</a>
              </div>
 
@@ -40,14 +39,19 @@ const ContactUs = () => {
             <span className="icon location-icon" aria-label="address">&#9873;</span>
             <div>
               <strong>Address:</strong><br />
-              123 Book Street, Literary Lane<br />
-              Wordsmith City, NY 10001
+               177/1, Sameem Garden
+               <br/>
+                Dhanasri Garden, Sundakkamuthur,
+                <br/>
+                 Coimbatore,
+                 <br/>
+                  Tamil Nadu - 641 010.
             </div>
           </div>
 
           
         </div>
-        {/* Right: Contact Form */}
+
         <form className="contact-form card" onSubmit={e => e.preventDefault()}>
           <div className="form-row">
             <label htmlFor="name">Your Name</label>

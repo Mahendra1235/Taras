@@ -361,10 +361,12 @@ background-size: cover;
   border-left: 4px solid #0073e6;
   border-radius: 6px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+
 }
 
 /* Contact Footer */
-.contact-footer {
+/* .contact-footer {
   margin-top: 3rem;
   background: #e6f0ff;
   padding: 1.5rem;
@@ -375,7 +377,7 @@ background-size: cover;
 .contact-footer p {
   margin: 0.4rem 0;
   font-size: 1.05rem;
-}
+} */
 
 /* ContactUs page */
 .contact-page {
@@ -821,6 +823,14 @@ h1 {
   object-fit: cover;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
+
+.training-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 
 @media (max-width: 480px) {
   .course-detail-container {

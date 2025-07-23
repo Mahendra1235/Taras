@@ -1,38 +1,33 @@
 import React from 'react';
-import FounderImage from '../taras-image.jpg'
-
+import FounderImage from '../taras-image.jpg';
 
 const AboutUs = () => {
   return (
     <section className="about-container">
       <h1>About Us</h1>
       <p>
-        We specialize in skill development and training, providing trained engineers to industries
-        working on the latest core engineering technologies. In the past six years, we have trained
-        over 90,000 engineers. We bridge academia‑industry gaps by developing innovative programs,
-        and setting up advanced industrial labs in VLSI, FPGA, IoT, AI, Cloud, RISC‑V, Embedded,
-        Robotics & Automation at universities with the help of our technical leaders.
+        At TARAS SYSTEMS AND SOLUTIONS, we specialize in cutting-edge product development and skill enhancement in core engineering domains. Our mission is to bridge the gap between emerging technologies and real-world applications by nurturing next-generation engineers and developing future-ready solutions.
+      </p>
+      <p>
+        Over the past six years, we have collaborated with universities and industries to drive innovation through domain-specific R&D, hands-on technical mentorship, and advanced lab setups in areas like VLSI, FPGA, IoT, AI, Cloud Computing, RISC‑V, Embedded Systems, and Robotics.
       </p>
 
       <div className="founder">
-  <div className="founder-content">
-    <h2>About the Founder</h2>
-    <p>
-      TARAS SYSTEMS AND SOLUTIONS was founded by professionals with 25+ years of industry
-      experience. The company is led by Dr. K. Thanushkodi, former Anna University Syndicate
-      member, with 40+ years in government and private engineering institutes.
-    </p>
-  </div>
-  <img src={FounderImage} alt="Founder Dr.K.Thanushkodi" className="founder-img" />
-</div>
-
+        <div className="founder-content">
+          <h2>About the Founder</h2>
+          <p>
+            TARAS SYSTEMS AND SOLUTIONS was founded by a team of seasoned professionals with over 25 years of experience in the engineering and technology ecosystem. The company is led by Dr. K. Thanushkodi, former Syndicate Member of Anna University, with a career spanning 40+ years across public and private engineering institutions.
+          </p>
+        </div>
+        <img src={FounderImage} alt="Founder Dr.K.Thanushkodi" className="founder-img" />
+      </div>
 
       <div className="qualities">
         <h2>Our Approach</h2>
         <ul>
-          <li>High skill development through measurable transformation</li>
-          <li>Flexible, tailormade programs with critical thinking & decision‑making focus</li>
-          <li>Industry‑engaged learning via domain expert sessions and networking opportunities </li>
+          <li>Product innovation backed by deep technical expertise</li>
+          <li>Collaborative development with academic and industry partners</li>
+          <li>Hands-on skill building through live projects and real-world problem solving</li>
         </ul>
       </div>
 
@@ -40,26 +35,17 @@ const AboutUs = () => {
         <div className="vision">
           <h3>Our Vision</h3>
           <p>
-            To be the leading provider of IT & semiconductor‑design training solutions, empowering
-            individuals and organizations in Bangalore and beyond, while fostering a culture of continuous
-            learning and driving technological advancement :contentReference.
+            To be a leading force in product engineering and technology innovation, empowering individuals and organizations to create impactful solutions across sectors—from semiconductors to smart systems.
           </p>
         </div>
         <div className="mission">
           <h3>Our Mission</h3>
           <ul>
-            <li>Empower clients with innovative solutions that enhance business performance</li>
-            <li>Provide top‑tier hands‑on training in VLSI, Embedded Systems, AI, IoT, Wireless, Automation & Cloud</li>
-            <li>Cultivate curiosity, creativity, and practical application for learners</li>
+            <li>Accelerate product development through collaborative R&D and prototyping</li>
+            <li>Build future-ready engineers through real-time, application-driven learning</li>
+            <li>Foster creativity and problem-solving through a culture of innovation</li>
           </ul>
         </div>
-      </div>
-
-      <div className="contact-footer">
-        <h2>Contact Us</h2>
-        <p>Office: Bengaluru</p>
-        <p>Phone: +91 78455 50414</p>
-        <p>Email: shriram@tarassolutions.com, HR@tarassolutions.com, Madhav.s@tarassolutions.com</p>
       </div>
     </section>
   );
