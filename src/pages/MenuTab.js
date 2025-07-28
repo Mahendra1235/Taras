@@ -1,10 +1,11 @@
 import React from 'react';
 
 const menuTabs = [
-  { key: 'training', label: 'Training' },
   { key: 'products', label: 'Products' },
   { key: 'coe', label: 'COE' },
   { key: 'projects', label: 'Projects' },
+  { key: 'training', label: 'Training' },
+
 ];
 
 function MenuTabs({ activeTab, onTabChange }) {

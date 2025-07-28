@@ -31,6 +31,7 @@ function AimlCoursePage() {
       <div className="course-image-group">
         <div className="image-box">
           <img src={cloudComputingImg} alt="Cloud Computing" />
+          <p className="img-label">AI/ML</p>
         </div>
        
       </div>

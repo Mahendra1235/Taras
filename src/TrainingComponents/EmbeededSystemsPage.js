@@ -25,7 +25,7 @@ function EmbeddedSystemsPage() {
       <div className="course-image-group">
         <div className="image-box">
           <img src={embeddedProgrammingImg} alt="Embedded Programming" />
-          <p className="img-label">Embedded Programming</p>
+          <p className="img-label">Embedded Systems</p>
         </div>
        
       </div>
