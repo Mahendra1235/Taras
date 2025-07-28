@@ -78,7 +78,7 @@ const data = {
 };
 
 function SolutionsPage() {
-  const [activeTab, setActiveTab] = useState('training');
+  const [activeTab, setActiveTab] = useState('products');
   const [selectedCourseKey, setSelectedCourseKey] = useState(null);
 
   const currentCourses = data[activeTab] || [];
