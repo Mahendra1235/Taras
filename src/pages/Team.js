@@ -10,7 +10,7 @@ const teamMembers = [
 
 {
     name: 'Venkateshan',
-    role: 'VLSI Software & AI/ML',
+    role: 'VLSI, Software & AI/ML',
     image: 'https://randomuser.me/api/portraits/men/83.jpg',
     bio: 'Expert in VLSI, Software & AI/ML. Led 25+ hands-on bootcamps across universities.'
   },
