@@ -4,7 +4,7 @@ const menuTabs = [
   { key: 'products', label: 'Products' },
   { key: 'coe', label: 'COE' },
   { key: 'projects', label: 'Projects' },
-  { key: 'training', label: 'Training' },
+  { key: 'training', label: 'AI-Driven Talent Selection Platform' },
 
 ];
 
