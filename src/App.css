@@ -519,7 +519,7 @@ background-size: cover;
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-size: 2rem;
 }
 
@@ -1138,4 +1138,271 @@ h1 {
   .bio {
     font-size: 0.9rem;
   }
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1,
+.container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.container p {
+  text-align: center;
+  color: #555;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.product-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.button-add {
+  background-color: #28a745;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.button-add:hover {
+  background-color: #218838;
+}
+
+.button-remove {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-remove:hover {
+  background-color: #c82333;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.cart-table th, .cart-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.cart-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.cart-table tfoot td {
+  background-color: #f9f9f9;
+}
+
+.checkout-button {
+  display: block;
+  margin: 20px auto 0;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.checkout-button:hover {
+  background-color: #0069d9;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.product-list {
+  flex: 3;
+}
+
+.cart-wrapper {
+  flex: 1; 
+  min-width: 450px;
+  background-color:whitesmoke;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.cart-wrapper h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .cart-wrapper {
+    width: 100%;
+    min-width: unset;
+    max-height: none;
+    margin-top: 20px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .checkout-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 10px;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .product-item {
+    padding: 10px;
+  }
+
+  .product-image {
+    height: 140px;
+  }
+
+  .button-add,
+  .button-remove,
+  .checkout-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .cart-table th,
+  .cart-table td {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .cart-wrapper {
+    padding: 15px;
+  }
+
+  .cart-wrapper h2 {
+    font-size: 18px;
+  }
+}
+
+/* Interview.css */
+
+.interview-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.interview-heading {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.interview-description {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.toggle-button {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+.contact-box {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.contact-box h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact-box li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.contact-warning {
+  color: red;
+  font-weight: bold;
 }
