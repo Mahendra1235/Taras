@@ -3,16 +3,16 @@ import React from 'react';
 const teamMembers = [
   {
     name: 'Madhavan',
-    role: 'VLSI ',
+    role: 'Embedded Systems & IOT ',
     image: 'https://randomuser.me/api/portraits/men/39.jpg',
     bio: 'PhD in Microelectronics with 15+ years of industry and academic experience in VLSI and ASIC design.'
   },
 
 {
     name: 'Venkateshan',
-    role: 'Embedded Systems & AI/ML',
+    role: 'VLSI & AI/ML',
     image: 'https://randomuser.me/api/portraits/men/83.jpg',
-    bio: 'Expert in AI and ML. Led 25+ hands-on bootcamps across universities.'
+    bio: 'Expert in VLSI, Software & AI/ML. Led 25+ hands-on bootcamps across universities.'
   },
   
 ];
