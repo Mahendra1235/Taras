@@ -1346,7 +1346,7 @@ h1 {
   }
 }
 
-/* Interview.css */
+/* Interviewpage */
 
 .interview-container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1436,3 +1436,19 @@ h1 {
     transform: translateY(0);
   }
 }
+
+.project-page {
+  background: url('../src/assets/ComingSoon.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 75vh;
+  width: 100vw;
+  padding-bottom: 4rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 400px) {
+  .project-page {
+    min-height: 68vh;
+    width:auto;  }
+}
+
