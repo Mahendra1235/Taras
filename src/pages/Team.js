@@ -1,18 +1,20 @@
 import React from 'react';
+import MadhavanProfile from '../assets/Team/Madhavapandian Photo id.jpg';
+import VenkateshProfile from '../assets/Team/Venkatesh Photo id.jpeg';
 
 const teamMembers = [
   {
-    name: 'Madhavan',
+    name: 'Madhava Pandian',
     role: 'Embedded Systems & IOT ',
-    image: 'https://randomuser.me/api/portraits/men/39.jpg',
-    bio: 'PhD in Microelectronics with 15+ years of industry and academic experience in VLSI and ASIC design.'
+    image: MadhavanProfile,
+    bio: 'Ph.D. in Electrical Engineering with 14+ years in Embedded Systems & IoT. Director at Taras Systems, specializing in RTOS, Linux kernel, device drivers, and AI for edge. Has trained 7000+ students and conducted FDPs across 60+ institutions.'
   },
 
 {
-    name: 'Venkateshan',
+    name: 'Venkatesh Rajakutti',
     role: 'VLSI, Software & AI/ML',
-    image: 'https://randomuser.me/api/portraits/men/83.jpg',
-    bio: 'Expert in VLSI, Software & AI/ML. Led 25+ hands-on bootcamps across universities.'
+    image: VenkateshProfile,
+    bio: 'VLSI & software expert with 13+ years of experience in RTL design, UVM, Verilog/SystemVerilog, and semiconductor protocols. Skilled in C/C++, Java, Python, and AI/ML with 580+ real-time projects. Trained 6000+ students and led 60+ academic programs.'
   },
   
 ];

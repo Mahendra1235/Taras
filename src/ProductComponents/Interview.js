@@ -21,7 +21,7 @@ function Interview() {
 
       {showContacts && (
         <div className="contact-box">
-          <h4>Contact Persons (Paid Services)</h4>
+          <h4>Contact Persons </h4>
           <ul>
             <li>
               <strong>John Doe</strong> – Interview Coach<br />
@@ -34,9 +34,6 @@ function Interview() {
               WhatsApp: +1234567890
             </li>
           </ul>
-          <p className="contact-warning">
-            * Please note: These services are paid.
-          </p>
         </div>
       )}
     </div>

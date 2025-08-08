@@ -1044,14 +1044,14 @@ h1 {
 .team-page {
   padding: 60px 20px;
   background: linear-gradient(to right, #f0f4f8, #eaf1f8);
-  min-height: 80vh;
+  min-height: 85vh;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .team-page h1 {
   font-size: 3rem;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   color: #1d3557;
   letter-spacing: 1px;
   font-weight: 700;
@@ -1061,7 +1061,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -1084,10 +1084,10 @@ h1 {
 }
 
 .team-img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: fill;
   margin-bottom: 20px;
   border: 5px solid #457b9d;
   transition: transform 0.3s ease;
@@ -1140,6 +1140,8 @@ h1 {
   }
 }
 
+/*Training kits */
+
 .container {
   max-width: 1600px;
   margin: 0px auto;
@@ -1163,7 +1165,7 @@ h1 {
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 45px;
   margin-top: 30px;
 }
 
@@ -1271,16 +1273,16 @@ h1 {
 .cart-wrapper {
   flex: 1; 
   min-width: 450px;
-  background-color:whitesmoke;
-  padding: 20px;
+  background-color:white;
+  padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  max-height: 100vh;
-  overflow-y: auto;
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); */
+  max-height: 50%;
+  overflow-y:auto;
 }
 
 .cart-wrapper h2 {
-  margin-top: 0;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -1402,7 +1404,4 @@ h1 {
   line-height: 1.6;
 }
 
-.contact-warning {
-  color: red;
-  font-weight: bold;
-}
+
