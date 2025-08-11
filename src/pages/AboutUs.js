@@ -1,5 +1,5 @@
 import React from 'react';
-import FounderImage from '../taras-image.jpg';
+import FounderImage from '../assets/taras-image.jpg';
 
 const AboutUs = () => {
   return (
