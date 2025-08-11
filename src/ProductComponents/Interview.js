@@ -24,14 +24,14 @@ function Interview() {
           <h4>Contact Persons </h4>
           <ul>
             <li>
-              <strong>John Doe</strong> – Interview Coach<br />
-              Email: john.doe@example.com<br />
-              WhatsApp: +1234567890
+              <span className="highlighted-name">Harshavardhan</span><br/><br/>
+              <strong>📧Email:</strong> <a href="mailto:harshavardhan.p@tarassolutions.com" className="contact-link">harshavardhan.p@tarassolutions.com</a><br />
+              <strong>📱WhatsApp: </strong><a href="tel:+91 9384931363" className="contact-link">+91 9384931363</a>
             </li>
             <li>
-              <strong>Jane Smith</strong> – Study Material Provider<br />
-              Email: jane.smith@example.com<br />
-              WhatsApp: +1234567890
+              <span className="highlighted-name">Shriram</span><br/><br/>
+              <strong>📧Email:</strong> <a href="mailto:shriram@tarassolutions.com" className="contact-link">shriram@tarassolutions.com</a><br />
+              <strong>📱WhatsApp: </strong><a href="tel:+91 9384931363" className="contact-link">+91 9384931363</a>
             </li>
           </ul>
         </div>

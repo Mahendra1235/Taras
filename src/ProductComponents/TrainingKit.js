@@ -17,121 +17,114 @@ const products = [
 ];
 
 function TrainingKit() {
-  const [cart, setCart] = useState([]);
+  const [showForm, setShowForm] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-  function addToCart(product) {
-    setCart((prevCart) => {
-      const existing = prevCart.find((item) => item.product.id === product.id);
-      if (existing) {
-        return prevCart.map((item) =>
-          item.product.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      }
-      return [...prevCart, { product, quantity: 1 }];
-    });
+  const [phoneError, setPhoneError] = useState("");
+  const indiaPhoneRegex = /^[6-9]\d{9}$/;
+
+  function handleEnquire(product) {
+    setSelectedProduct(product);
+    setShowForm(true);
   }
 
-  function removeFromCart(productId) {
-    setCart((prevCart) =>
-      prevCart
-        .map((item) =>
-          item.product.id === productId
-            ? { ...item, quantity: item.quantity - 1 }
-            : item
-        )
-        .filter((item) => item.quantity > 0)
-    );
-  }
+  function handleChange(e) {
+    const { name, value } = e.target;
+ if (name === "phone") {
+      const numericValue = value.replace(/\D/g, "");
+      setFormData((prev) => ({ ...prev, [name]: numericValue }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+    }
 
-  const totalPrice = cart.reduce(
-    (total, item) => total + item.product.price * item.quantity,
-    0
-  );
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!indiaPhoneRegex.test(formData.phone)) {
+      setPhoneError("Please enter a valid 10-digit phone number starting with 6-9.");
+      return;
+    }
+
+    setPhoneError("");
+
+    const enquiryData = {
+      ...formData,
+      product: selectedProduct.name,
+    };
+
+    console.log("Enquiry Submitted:", enquiryData);
+    alert("Your enquiry has been sent!");
+
+    setShowForm(false);
+    setFormData({ name: "", email: "", phone: "", message: "" });
+    setSelectedProduct(null);
+  }
 
   return (
-    <div className="container">
+   <div className="container">
   <h1>Training Kits</h1>
   <p>Explore our hands-on training kits for VLSI, Embedded Systems, and AI/ML.</p>
 
-  {/* New flex wrapper */}
-  <div className="content-wrapper">
+  <div className="main-content">
     <div className="product-list">
       {products.map((product) => (
         <div key={product.id} className="product-item">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="product-image"
-          />
+          <img src={product.image} alt={product.name} className="product-image" />
           <h3>{product.name}</h3>
           <p style={{ fontWeight: "bold" }}>₹{product.price}</p>
-          <button
-            onClick={() => addToCart(product)}
-            className="button-add"
-          >
-            Add to Cart
+          <button onClick={() => handleEnquire(product)} className="button-add">
+            Enquire
           </button>
         </div>
       ))}
     </div>
 
-    <div className="cart-wrapper">
-      <h2>Shopping Cart</h2>
-      {cart.length === 0 ? (
-        <p>Your cart is empty</p>
-      ) : (
-        <div>
-          <table className="cart-table">
-            <thead>
-              <tr>
-                <th>Product</th>
-                <th>Qty</th>
-                <th>Price</th>
-                <th>Total</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {cart.map(({ product, quantity }) => (
-                <tr key={product.id}>
-                  <td>{product.name}</td>
-                  <td>{quantity}</td>
-                  <td>₹{product.price}</td>
-                  <td>₹{product.price * quantity}</td>
-                  <td>
-                    <button
-                      onClick={() => removeFromCart(product.id)}
-                      className="button-remove"
-                      title="Remove one"
-                    >
-                      &times;
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colSpan="3" style={{ textAlign: "right", fontWeight: "bold" }}>
-                  Total:
-                </td>
-                <td style={{ fontWeight: "bold" }}>₹{totalPrice}</td>
-                <td></td>
-              </tr>
-            </tfoot>
-          </table>
-
-          <button
-            onClick={() => alert("Checkout functionality coming soon!")}
-            className="checkout-button"
-          >
-            Checkout
-          </button>
-        </div>
-      )}
-    </div>
+    {showForm && (
+      <div className="enquiry-form">
+        <h2>Enquiry for: {selectedProduct?.name}</h2>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Name:</label>
+            <input name="name" value={formData.name} onChange={handleChange} required />
+          </div>
+          <div>
+            <label>Email:</label>
+            <input name="email" type="email" value={formData.email} onChange={handleChange} required />
+          </div>
+          <div>
+                <label>Phone:</label>
+                <input
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  maxLength={10}
+                  required
+                />
+                {phoneError && (
+                  <p style={{ color: "red", marginTop: "4px" }}>{phoneError}</p>
+                )}
+              </div>
+          <div>
+            <label>Message:</label>
+            <textarea name="message" value={formData.message} onChange={handleChange} />
+          </div>
+          <div>
+            <button type="submit" className="send-button">Send Enquiry</button>
+            <button onClick={() => setShowForm(false)} type="button" className="button-cancel" style={{ marginLeft: "10px" }}>
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    )}
   </div>
 </div>
 
