@@ -10,7 +10,7 @@ function Interview() {
 
   return (
     <div className="interview-container">
-      <h2 className="interview-heading">Interview Preparation</h2>
+      <h2 className="interview-heading">Skill Building & Guidance</h2>
       <p className="interview-description">
         Resources and mock interviews to prepare for core technical job roles.
       </p>
@@ -31,7 +31,7 @@ function Interview() {
             <li>
               <span className="highlighted-name">Shriram</span><br/><br/>
               <strong>📧Email:</strong> <a href="mailto:shriram@tarassolutions.com" className="contact-link">shriram@tarassolutions.com</a><br />
-              <strong>📱WhatsApp: </strong><a href="tel:+91 9384931363" className="contact-link">+91 9384931363</a>
+              <strong>📱WhatsApp: </strong><a href="tel:+91 78455 50414" className="contact-link">+91 78455 50414 </a>
             </li>
           </ul>
         </div>

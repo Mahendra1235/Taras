@@ -7,16 +7,44 @@ const ContactUs = () => {
   const indiaPhoneRegex = /^[6-9]\d{9}$/;
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!indiaPhoneRegex.test(phone)) {
-      setPhoneError('Please enter a valid 10-digit phone number.');
-      return;
-    }
+  if (!indiaPhoneRegex.test(phone)) {
+    setPhoneError('Please enter a valid 10-digit phone number.');
+    return;
+  }
 
-    setPhoneError('');
-    alert('Form submitted successfully!');
+  const formData = {
+    name: e.target.name.value,
+    email: e.target.email.value,
+    phone,
+    subject: e.target.subject.value,
+    message: e.target.message.value,
   };
+
+  fetch("http://localhost:5000/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to send message");
+      return res.json();
+    })
+    .then((data) => {
+      alert("Message sent successfully!");
+      // Optional: clear the form
+      e.target.reset();
+      setPhone('');
+    })
+    .catch((err) => {
+      console.error("Error sending message:", err);
+      alert("Something went wrong. Please try again later.");
+    });
+};
+
 
   return (
     <div className="contact-page">

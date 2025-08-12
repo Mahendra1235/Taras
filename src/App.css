@@ -367,6 +367,7 @@ background-size: cover;
 
 /* ContactUs page */
 .contact-page {
+  overflow: hidden;
   background: linear-gradient(to right, #f0f4f8, #eaf1f8);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #003366;
@@ -389,8 +390,7 @@ background-size: cover;
   max-width: 1600px;
   margin: 0 auto;
   flex-wrap: wrap;
-  padding-bottom: 50px;
-  /* margin-bottom: 20px; */
+  padding-bottom: 30px;
 }
 
 .card {
@@ -439,6 +439,7 @@ background-size: cover;
 
 
 /* Contact page */
+
 .contact-form label {
   display: block;
   font-weight: 600;
@@ -447,7 +448,7 @@ background-size: cover;
 }
 
 .form-row {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   width: 100%;
 }
 
@@ -465,6 +466,10 @@ background-size: cover;
   font-family: inherit;
   transition: border-color 0.2s ease;
   resize: vertical;
+}
+
+.contact-form textarea {
+  height: 10vh;
 }
 
 .contact-form input:focus,
@@ -707,7 +712,7 @@ h1 {
 
 .course-detail-container {
   display: flex;
-  min-height: 100vh;
+  min-height: fit-content;
   flex-direction: row; 
   align-items: flex-start;
   justify-content: space-between;

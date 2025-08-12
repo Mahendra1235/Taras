@@ -51,7 +51,7 @@ const data = {
     },
     {
       key: 'interviewprep',
-      title: 'Interview Preparation',
+      title: 'Skill Building & Guidance',
       description: 'Mock interviews, aptitude, and domain-specific prep.',
       image: interview,
       component: Interview,

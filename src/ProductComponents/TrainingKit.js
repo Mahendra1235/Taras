@@ -44,28 +44,46 @@ function TrainingKit() {
     }
     }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+ function handleSubmit(e) {
+  e.preventDefault();
 
-    if (!indiaPhoneRegex.test(formData.phone)) {
-      setPhoneError("Please enter a valid 10-digit phone number starting with 6-9.");
-      return;
-    }
-
-    setPhoneError("");
-
-    const enquiryData = {
-      ...formData,
-      product: selectedProduct.name,
-    };
-
-    console.log("Enquiry Submitted:", enquiryData);
-    alert("Your enquiry has been sent!");
-
-    setShowForm(false);
-    setFormData({ name: "", email: "", phone: "", message: "" });
-    setSelectedProduct(null);
+  if (!indiaPhoneRegex.test(formData.phone)) {
+    setPhoneError("Please enter a valid 10-digit phone number starting with 6-9.");
+    return;
   }
+
+  setPhoneError("");
+
+  const enquiryData = {
+    ...formData,
+    product: selectedProduct.name,
+  };
+
+  fetch("http://localhost:5000/send-enquiry", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(enquiryData),
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to send enquiry");
+      return res.json();
+    })
+    .then((data) => {
+      console.log("Enquiry Submitted:", data);
+      alert("Your enquiry has been sent!");
+
+      setShowForm(false);
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setSelectedProduct(null);
+    })
+    .catch((err) => {
+      console.error("Error:", err);
+      alert("There was a problem sending your enquiry. Please try again.");
+    });
+}
+
 
   return (
    <div className="container">
