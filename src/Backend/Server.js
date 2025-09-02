@@ -108,7 +108,8 @@ app.post("/contactus", async (req, res) => {
   const { name, email, phone, subject, message } = req.body;
 
   const mailOptions = {
-    from: email,
+    from: process.env.EMAIL_USER,   // your Gmail account
+    replyTo: email,                 // user's email
     to: process.env.RECEIVER_EMAIL_CONTACT,
     subject: `Contact Form: ${subject || "No Subject"}`,
     html: createHtmlContent({
@@ -122,13 +123,15 @@ app.post("/contactus", async (req, res) => {
   };
 
   try {
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Contact message sent:", info.response);
     res.status(200).json({ message: "Message sent successfully" });
   } catch (error) {
     console.error("Error sending contact message:", error);
     res.status(500).json({ error: "Failed to send contact message" });
   }
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
