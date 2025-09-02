@@ -22,7 +22,7 @@ const ContactUs = () => {
     message: e.target.message.value,
   };
 
-  fetch("https://tarassolutions.com/contactus", {
+  fetch("http://localhost:5000/contact", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

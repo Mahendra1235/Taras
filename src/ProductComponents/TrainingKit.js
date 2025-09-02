@@ -59,7 +59,7 @@ function TrainingKit() {
     product: selectedProduct.name,
   };
 
-  fetch("https://tarassolutions.com/send-enquiry", {
+  fetch("http://localhost:5000/send-enquiry", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
