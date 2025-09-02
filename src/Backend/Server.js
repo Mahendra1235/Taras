@@ -104,7 +104,7 @@ app.post("/send-enquiry", async (req, res) => {
 });
 
 // Contact endpoint
-app.post("/contact", async (req, res) => {
+app.post("/contactus", async (req, res) => {
   const { name, email, phone, subject, message } = req.body;
 
   const mailOptions = {
