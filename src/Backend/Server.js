@@ -10,24 +10,13 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// const transporter = nodemailer.createTransport({
-//   service: "gmail",
-//   auth: {
-//     user: process.env.EMAIL_USER,    
-//     pass: process.env.EMAIL_PASS,     
-//   },
-// });
-
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false, // TLS
+  service: "gmail",
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.EMAIL_USER,    
+    pass: process.env.EMAIL_PASS,     
   },
 });
-
 
 // Styled HTML template function
 function createHtmlContent(data) {
